@@ -2,12 +2,13 @@
 #include "list.h"
 #include "shape.h"
 
-namespace shapes {
-
+namespace shapes 
+{
 	void Init(list &list) { list.listLength = 0; list.listHead = NULL; }
-	
-	void Clear(list &list) {
-		while (list.listHead != NULL) {
+	void Clear(list &list) 
+	{
+		while (list.listHead != NULL) 
+		{
 			listElement *temp = list.listHead->next;
 			delete list.listHead;
 			list.listHead = temp;

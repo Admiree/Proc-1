@@ -1,36 +1,43 @@
 #include "stdafx.h"
 #include <fstream>
 #include "shape.h"
+#include "protect.h"
 
 using namespace std;
 
-namespace shapes {
+namespace shapes 
+{
 	void ReadDimensionsOfShapeFromFileStream(rectangle &rectangle, ifstream &inFileStream);
 	void ReadDimensionsOfShapeFromFileStream(circle  &circle, ifstream &inFileStream);
 	void ReadDimensionsOfShapeFromFileStream(triangle  &triangle, ifstream &inFileStream);
 	
-	shape* ReadInfoAboutShapeFromFileStream(ifstream &inFileStream) {
+	shape* ReadInfoAboutShapeFromFileStream(ifstream &inFileStream)
+	{
 		shape *readShape;
 		int key;		
-		int _color;
-		float _plotn;
+		int color;
+		float plotn;
 
+		CheckInputFile(inFileStream);
 		inFileStream >> key;
-		inFileStream >> _color;
+		CheckKey(key);
+		inFileStream >> color;
+		CheckColor(color);
 
 		readShape = new shape;
 
-		switch (key) {
+		switch (key) 
+		{
 		case 1:			
-			readShape->_key = shape::key::RECTANGLE;
+			readShape->key = shape::key::RECTANGLE;
 			ReadDimensionsOfShapeFromFileStream(readShape->rectangle, inFileStream);
 			break;
 		case 2:
-			readShape->_key = shape::key::CIRCLE;
+			readShape->key = shape::key::CIRCLE;
 			ReadDimensionsOfShapeFromFileStream(readShape->circle, inFileStream);
 			break;
 		case 3:
-			readShape->_key = shape::key::TRIANGLE;
+			readShape->key = shape::key::TRIANGLE;
 			ReadDimensionsOfShapeFromFileStream(readShape->triangle, inFileStream);
 			break;
 		default:
@@ -38,9 +45,9 @@ namespace shapes {
 		}
 
 
-		readShape->_color = (shape::color)_color;
-		inFileStream >> _plotn;
-		readShape->plotn =_plotn;
+		readShape->_color = (shape::color)color;
+		inFileStream >> plotn;
+		readShape->plotn = plotn;
 
 
 

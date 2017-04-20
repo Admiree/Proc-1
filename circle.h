@@ -2,8 +2,10 @@
 #ifndef _circle
 #define _circle
 
-namespace shapes {
-	struct circle {
+namespace shapes 
+{
+	struct circle 
+	{
 		int radius;
 		int centerX, centerY;
 	};

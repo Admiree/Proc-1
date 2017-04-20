@@ -4,17 +4,20 @@
 
 using namespace std;
 
-namespace shapes {
+namespace shapes 
+{
 	float CalculateShapePerimeter(shape &shape);
 	void WriteDimensionsOfShapeIntoFileStream(rectangle &rectangle, ofstream &outFileStream);
 	void WriteDimensionsOfShapeIntoFileStream(circle  &circle, ofstream &outFileStream);
 	void WriteDimensionsOfShapeIntoFileStream(triangle  &triangle, ofstream &outFileStream);
-	
-	
-	void WriteInfoAboutShapeIntoFileStream(shape &outShape, ofstream &outFileStream) {
+
+	void WriteInfoAboutShapeIntoFileStream(shape &outShape, ofstream &outFileStream)
+	{
+		void CheckOutputFile(ostream &outFileStream);
 		outFileStream << "It is ";
 		
-		switch (outShape._key) {
+		switch (outShape.key) 
+		{
 		case shape::key::RECTANGLE:
 			outFileStream << "Rectangle";
 			break;
@@ -29,9 +32,6 @@ namespace shapes {
 		}
 
 		outFileStream << "; Its color is ";
-
-
-		outFileStream << "; Its color is ";
 		string m[7] = { "RED", "ORANGE", "YELLOW", "GREEN", "CYAN", "BLUE", "MAGNETA" };
 
 		int i = outShape._color - 1;
@@ -39,7 +39,8 @@ namespace shapes {
 
 		outFileStream << "; And its dimensions are: ";
 
-		switch (outShape._key) {
+		switch (outShape.key) 
+		{
 		case shape::key::RECTANGLE:
 			WriteDimensionsOfShapeIntoFileStream(outShape.rectangle, outFileStream);
 			break;
@@ -54,9 +55,7 @@ namespace shapes {
 		}
 
 		outFileStream << "; Plotnost: " <<outShape.plotn;
-
 		outFileStream << "; Its perimeter is " << CalculateShapePerimeter(outShape);
-
 		outFileStream << ";" << endl;
 	}
 }

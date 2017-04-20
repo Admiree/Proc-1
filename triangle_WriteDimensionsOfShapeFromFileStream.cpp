@@ -4,8 +4,10 @@
 
 using namespace std;
 
-namespace shapes {
-	void WriteDimensionsOfShapeIntoFileStream(triangle &triangle, ofstream &outFileStream) {
-		outFileStream << "X =" << triangle.triangleX << ",  Y = " << triangle.triangleY << ",  Z = " << triangle.triangleZ;
+namespace shapes
+{
+	void WriteDimensionsOfShapeIntoFileStream(triangle &triangle, ofstream &outFileStream)
+	{
+		outFileStream << "It's triangle: " << "X = " << triangle.triangleX << ", Y = " << triangle.triangleY << ", Z = " << triangle.triangleZ;
 	}
 }

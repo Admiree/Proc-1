@@ -5,7 +5,8 @@
 
 using namespace std;
 
-namespace shapes {
+namespace shapes 
+{
 	void Init(list &list);
 	void Clear(list &list);
 	void LoadElements(list &list, ifstream &inFileStream);
@@ -16,7 +17,8 @@ namespace shapes {
 
 using namespace shapes;
 
-int main(int argc, char* argv[]) {
+int main(int argc, char* argv[]) 
+{
 
 	ifstream in;
 	in.open("in.txt");
@@ -52,7 +54,8 @@ int main(int argc, char* argv[]) {
 
 	out << "By your mask. " << endl << endl;
 
-	switch (enter) {
+	switch (enter) 
+	{
 	case 1:
 		PrintElementsByMask(list, out, CIRCLE);
 		break;

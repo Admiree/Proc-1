@@ -4,8 +4,10 @@
 
 using namespace std;
 
-namespace shapes {
-	void WriteDimensionsOfShapeIntoFileStream(circle &circle, ofstream &outFileStream) {
-		outFileStream << "radius = " << circle.radius << ", center X = " << circle.centerX << ", center Y = " << circle.centerY;
+namespace shapes
+{
+	void WriteDimensionsOfShapeIntoFileStream(circle &circle, ofstream &outFileStream) 
+	{
+		outFileStream << "It's circle: " << "radius = " << circle.radius << ", center X = " << circle.centerX << ", center Y = " << circle.centerY;
 	}
 }	

@@ -6,8 +6,10 @@
 
 using namespace std;
 
-namespace shapes {
-	float CalculateShapePerimeter(circle &circle) {
+namespace shapes 
+{
+	float CalculateShapePerimeter(circle &circle) 
+	{
 		return 2 * pi * circle.radius;
 	}
 }

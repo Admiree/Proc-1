@@ -4,8 +4,10 @@
 
 using namespace std;
 
-namespace shapes {
-	float CalculateShapePerimeter(rectangle &rectangle) {
+namespace shapes 
+{
+	float CalculateShapePerimeter(rectangle &rectangle) 
+	{
 		return (abs(2 * (rectangle.endX - rectangle.startX)) + abs(2 * (rectangle.endY - rectangle.startY)));
 	}
 }

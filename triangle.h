@@ -2,8 +2,10 @@
 #ifndef _triangle
 #define _triangle
 
-namespace shapes {
-	struct triangle {
+namespace shapes
+{
+	struct triangle 
+	{
 		int triangleX, triangleY, triangleZ;
 	};
 }
