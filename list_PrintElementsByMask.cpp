@@ -16,12 +16,12 @@ namespace shapes {
 		while (temp != NULL) {
 			switch (mask) {
 			case RECTANGLE:
-				if (temp->shape->key == RECTANGLE) {
+				if (temp->shape->_key == RECTANGLE) {
 					WriteInfoAboutShapeIntoFileStream(*(temp->shape), outFileStream);
 				}
 				break;
 			case CIRCLE:
-				if (temp->shape->key == CIRCLE) {
+				if (temp->shape->_key == CIRCLE) {
 					WriteInfoAboutShapeIntoFileStream(*(temp->shape), outFileStream);
 				}
 				break;

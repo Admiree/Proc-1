@@ -11,6 +11,7 @@ namespace shapes {
 	void LoadElements(list &list, ifstream &inFileStream);
 	void PrintElements(list &list, ofstream &outFileStream);
 	void PrintElementsByMask(list &list, ofstream &outFileStream, mask mask);
+	void SortByPerimeter(list &list);
 }
 
 using namespace shapes;
@@ -24,13 +25,16 @@ int main(int argc, char* argv[]) {
 	out.open("out.txt");
 
 	cout << "Start" << endl;
-
 	list list;
-
 	Init(list);
 	LoadElements(list, in);
 
 	out << "Filled container. " << endl << endl;
+	PrintElements(list, out);
+
+	out << "Sorted container. " << endl << endl;
+	SortByPerimeter(list);
+
 	PrintElements(list, out);
 
 	out << endl << endl;

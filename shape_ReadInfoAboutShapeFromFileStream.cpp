@@ -7,30 +7,42 @@ using namespace std;
 namespace shapes {
 	void ReadDimensionsOfShapeFromFileStream(rectangle &rectangle, ifstream &inFileStream);
 	void ReadDimensionsOfShapeFromFileStream(circle  &circle, ifstream &inFileStream);
+	void ReadDimensionsOfShapeFromFileStream(triangle  &triangle, ifstream &inFileStream);
 	
 	shape* ReadInfoAboutShapeFromFileStream(ifstream &inFileStream) {
 		shape *readShape;
-		int key;
-		int color;
+		int key;		
+		int _color;
+		float _plotn;
 
 		inFileStream >> key;
-		inFileStream >> color;
+		inFileStream >> _color;
 
 		readShape = new shape;
 
 		switch (key) {
 		case 1:			
-			readShape->key = shape::key::RECTANGLE;
+			readShape->_key = shape::key::RECTANGLE;
 			ReadDimensionsOfShapeFromFileStream(readShape->rectangle, inFileStream);
 			break;
 		case 2:
-			readShape->key = shape::key::CIRCLE;
+			readShape->_key = shape::key::CIRCLE;
 			ReadDimensionsOfShapeFromFileStream(readShape->circle, inFileStream);
+			break;
+		case 3:
+			readShape->_key = shape::key::TRIANGLE;
+			ReadDimensionsOfShapeFromFileStream(readShape->triangle, inFileStream);
 			break;
 		default:
 			return NULL;
 		}
-		readShape->color = color;
+
+
+		readShape->_color = (shape::color)_color;
+		inFileStream >> _plotn;
+		readShape->plotn =_plotn;
+
+
 
 		return readShape;
 	}
