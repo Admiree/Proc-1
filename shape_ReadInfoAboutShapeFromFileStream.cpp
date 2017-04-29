@@ -19,6 +19,7 @@ namespace shapes {
 		shape *readShape;
 		int key;		
 		int _color;
+		float _plotn;
 		inFileStream >> key;
 		inFileStream >> _color;	
 
@@ -41,6 +42,9 @@ namespace shapes {
 		}
 
 		readShape->_color = (shape::color)_color;
+		inFileStream >> _plotn;
+		readShape->plotn =_plotn;
+
 
 		return readShape;
 	}
