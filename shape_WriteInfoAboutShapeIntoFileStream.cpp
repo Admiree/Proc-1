@@ -47,7 +47,6 @@ namespace shapes {
 
 		outFileStream << "; Its perimeter is " << CalculateShapePerimeter(outShape);
 
-
 	
 		outFileStream << ";" << endl;
 	}

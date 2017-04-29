@@ -10,6 +10,7 @@ namespace shapes {
 	void Clear(list &list);
 	void LoadElements(list &list, ifstream &inFileStream);
 	void PrintElements(list &list, ofstream &outFileStream);
+	void SortByPerimeter(list &list, bool sortByIncrease);
 }
 
 using namespace shapes;
@@ -36,8 +37,34 @@ int main(int argc, char* argv[]) {
 	LoadElements(list, in);
 	out << "Filled container." << endl;
 	PrintElements(list, out);
+
+	cout << "Done!" << endl;
+	int enter = 0;
+
+	do {
+		cout << "How to sort output? Please, enter (1 - increase; 2 - decrease):" << endl;
+		cin >> enter;
+		if (enter != 1 && enter != 2) {
+			cout << "Error! Only 1 and 2!" << endl;
+		}
+
+	} while (enter != 1 && enter != 2);
+
+
+	out << "Sorted container. " << endl << endl;
+	if (enter == 1) {
+		SortByPerimeter(list, true);
+	}
+	else {
+		SortByPerimeter(list, false);
+	}
+
+	PrintElements(list, out);
+
+	out << endl << endl;
+
+	out << "Empty container. " << endl << endl;
 	Clear(list);
-	out << "Empty container. " << endl;
 	PrintElements(list, out);
 
 	cout << "Stop" << endl;
