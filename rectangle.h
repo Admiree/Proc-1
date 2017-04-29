@@ -5,7 +5,7 @@
 namespace shapes {
 	struct rectangle {
 		int startX, startY;
-		int endX, endY;
+		int endX, endY;		
 	};
 }
 
