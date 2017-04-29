@@ -31,9 +31,7 @@ int main(int argc, char* argv[]) {
 
 
 	cout << "Start" << endl;
-
 	list list;
-
 	Init(list);
 	LoadElements(list, in);
 	out << "Filled container." << endl;

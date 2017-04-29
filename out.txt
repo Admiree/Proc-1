@@ -1,7 +1,10 @@
 Filled container.
-List contents 3 elements.
-3: It is Circle; Its color is YELLOW; And its dimensions are: radius = 50, center X = 13, center Y = 17;
-2: It is Circle; Its color is YELLOW; And its dimensions are: radius = 10, center X = 15, center Y = 20;
-1: It is Rectangle; Its color is BLUE; And its dimensions are: start X = 10, start Y = 20, end X = 30, end Y = 440;
+List contents 6 elements.
+6: It is Circle; Its color is MAGNETA; And its dimensions are: radius = 10, center X = 1, center Y = 20; Its perimeter is 62.8319;
+5: It is Circle; Its color is GREEN; And its dimensions are: radius = 32, center X = 54, center Y = 64; Its perimeter is 201.062;
+4: It is Rectangle; Its color is BLUE; And its dimensions are: start X = 10, start Y = 5, end X = 43, end Y = 65; Its perimeter is 186;
+3: It is Rectangle; Its color is MAGNETA; And its dimensions are: start X = 10, start Y = 20, end X = 30, end Y = 44; Its perimeter is 88;
+2: It is Circle; Its color is MAGNETA; And its dimensions are: radius = 50, center X = 13, center Y = 17; Its perimeter is 314.159;
+1: It is Circle; Its color is MAGNETA; And its dimensions are: radius = 10, center X = 15, center Y = 20; Its perimeter is 62.8319;
 Empty container. 
 List contents 0 elements.

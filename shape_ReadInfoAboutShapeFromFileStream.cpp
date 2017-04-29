@@ -37,6 +37,7 @@ namespace shapes {
 
 		readShape->_color = (shape::color)_color;
 
+
 		return readShape;
 	}
 }
