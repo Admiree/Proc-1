@@ -6,6 +6,7 @@
 using namespace std;
 
 namespace shapes {
+	float CalculateShapePerimeter(shape &shape);
 	void WriteDimensionsOfShapeIntoFileStream(rectangle &rectangle, ofstream &outFileStream);
 	void WriteDimensionsOfShapeIntoFileStream(circle  &circle, ofstream &outFileStream);
 	
@@ -27,7 +28,7 @@ namespace shapes {
 		outFileStream << "; Its color is ";
 		string m[7] = { "RED", "ORANGE", "YELLOW", "GREEN", "CYAN", "BLUE", "MAGNETA" };
 
-		int i = outShape._color -1;
+		int i = outShape._color - 1;
 		outFileStream << m[i].c_str();
 
 		outFileStream << "; And its dimensions are: ";
@@ -44,6 +45,8 @@ namespace shapes {
 		}
 
 		outFileStream << "; Plotnost: " <<outShape.plotn;
+
+		outFileStream << "; Its perimeter is " << CalculateShapePerimeter(outShape);
 
 		outFileStream << ";" << endl;
 	}

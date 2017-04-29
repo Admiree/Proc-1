@@ -1,6 +1,0 @@
-Filled container.
-List contents 2 elements.
-2: It is Circle; Its color is ORANGE; And its dimensions are: radius = 2, center X = 2, center Y = 2; Plotnost: 2.5;
-1: It is Rectangle; Its color is MAGNETA; And its dimensions are: start X = 10, start Y = 20, end X = 30, end Y = 440; Plotnost: 2.3;
-Empty container. 
-List contents 0 elements.

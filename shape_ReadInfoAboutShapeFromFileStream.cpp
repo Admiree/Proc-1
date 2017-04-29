@@ -40,6 +40,7 @@ namespace shapes {
 		inFileStream >> _plotn;
 		readShape->plotn =_plotn;
 
+
 		return readShape;
 	}
 }
