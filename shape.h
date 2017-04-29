@@ -7,15 +7,21 @@
 #include "circle.h"
 #include <fstream>
 
+#define RED 1
+#define ORANGE 2
+#define YELLOW 3
+#define GREEN 4
+#define CYAN 5
+#define BLUE 6
+#define MAGNETA 7
 
 using namespace std;
 
 namespace shapes {	
 	struct shape {
-		enum key { RECTANGLE, CIRCLE, };
-		key _key;
-		enum color {RED = 1,ORANGE = 2,YELLOW = 3,GREEN = 4,CYAN = 5,BLUE = 6,MAGNETA = 7};
-		color _color;
+		enum key { RECTANGLE, CIRCLE };
+		key key;
+		int color;
 		union {
 			rectangle rectangle;
 			circle circle;

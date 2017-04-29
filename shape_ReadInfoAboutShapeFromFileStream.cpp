@@ -1,14 +1,8 @@
 #include "stdafx.h"
 #include <fstream>
 #include "shape.h"
-#include "string.h"
-#include <windows.h>
-#include <cstring>
-#include <iostream>
-
 
 using namespace std;
-
 
 namespace shapes {
 	void ReadDimensionsOfShapeFromFileStream(rectangle &rectangle, ifstream &inFileStream);
@@ -16,26 +10,27 @@ namespace shapes {
 	
 	shape* ReadInfoAboutShapeFromFileStream(ifstream &inFileStream) {
 		shape *readShape;
-		int key;		
-		int _color;
+		int key;
+		int color;
+
 		inFileStream >> key;
-		inFileStream >> _color;	
+		inFileStream >> color;
 
 		readShape = new shape;
+
 		switch (key) {
 		case 1:			
-			readShape->_key = shape::key::RECTANGLE;
+			readShape->key = shape::key::RECTANGLE;
 			ReadDimensionsOfShapeFromFileStream(readShape->rectangle, inFileStream);
 			break;
 		case 2:
-			readShape->_key = shape::key::CIRCLE;
+			readShape->key = shape::key::CIRCLE;
 			ReadDimensionsOfShapeFromFileStream(readShape->circle, inFileStream);
 			break;
 		default:
 			return NULL;
 		}
-
-		readShape->_color = (shape::color)_color;
+		readShape->color = color;
 
 		return readShape;
 	}

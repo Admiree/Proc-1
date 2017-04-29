@@ -5,6 +5,8 @@
 
 namespace shapes {
 
+	enum mask { RECTANGLE, CIRCLE, RECTANGLE_AND_CIRCLE };
+
 	struct shape;
 
 	struct listElement {

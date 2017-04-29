@@ -8,4 +8,4 @@ namespace shapes {
 	void WriteDimensionsOfShapeIntoFileStream(circle &circle, ofstream &outFileStream) {
 		outFileStream << "radius = " << circle.radius << ", center X = " << circle.centerX << ", center Y = " << circle.centerY;
 	}
-}
+}	
