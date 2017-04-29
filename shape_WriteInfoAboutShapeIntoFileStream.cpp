@@ -8,6 +8,7 @@ using namespace std;
 namespace shapes {
 	void WriteDimensionsOfShapeIntoFileStream(rectangle &rectangle, ofstream &outFileStream);
 	void WriteDimensionsOfShapeIntoFileStream(circle  &circle, ofstream &outFileStream);
+	void WriteDimensionsOfShapeIntoFileStream(triangle  &triangle, ofstream &outFileStream);
 	
 	void WriteInfoAboutShapeIntoFileStream(shape &outShape, ofstream &outFileStream) {
 		outFileStream << "It is ";
@@ -19,6 +20,9 @@ namespace shapes {
 		case shape::key::CIRCLE:
 			outFileStream << "Circle";
 			break; 
+		case shape::key::TRIANGLE:
+				outFileStream << "Triangle";
+				break;
 		default:
 			break;
 		}
@@ -37,6 +41,9 @@ namespace shapes {
 			break;
 		case shape::key::CIRCLE:
 			WriteDimensionsOfShapeIntoFileStream(outShape.circle, outFileStream);
+			break;
+		case shape::key::TRIANGLE:
+			WriteDimensionsOfShapeIntoFileStream(outShape.triangle, outFileStream);
 			break;
 		default:
 			break;

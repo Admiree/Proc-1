@@ -13,6 +13,7 @@ using namespace std;
 namespace shapes {
 	void ReadDimensionsOfShapeFromFileStream(rectangle &rectangle, ifstream &inFileStream);
 	void ReadDimensionsOfShapeFromFileStream(circle  &circle, ifstream &inFileStream);
+	void ReadDimensionsOfShapeFromFileStream(triangle  &triangle, ifstream &inFileStream);
 	
 	shape* ReadInfoAboutShapeFromFileStream(ifstream &inFileStream) {
 		shape *readShape;
@@ -30,6 +31,10 @@ namespace shapes {
 		case 2:
 			readShape->_key = shape::key::CIRCLE;
 			ReadDimensionsOfShapeFromFileStream(readShape->circle, inFileStream);
+			break;
+		case 3:
+			readShape->_key = shape::key::TRIANGLE;
+			ReadDimensionsOfShapeFromFileStream(readShape->triangle, inFileStream);
 			break;
 		default:
 			return NULL;

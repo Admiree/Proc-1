@@ -1,7 +1,9 @@
 Filled container.
-List contents 3 elements.
-3: It is Circle; Its color is YELLOW; And its dimensions are: radius = 50, center X = 13, center Y = 17;
-2: It is Circle; Its color is YELLOW; And its dimensions are: radius = 10, center X = 15, center Y = 20;
-1: It is Rectangle; Its color is BLUE; And its dimensions are: start X = 10, start Y = 20, end X = 30, end Y = 440;
+List contents 5 elements.
+5: It is Circle; Its color is YELLOW; And its dimensions are: radius = 50, center X = 13, center Y = 17;
+4: It is Circle; Its color is YELLOW; And its dimensions are: radius = 10, center X = 15, center Y = 20;
+3: It is Rectangle; Its color is BLUE; And its dimensions are: start X = 10, start Y = 20, end X = 30, end Y = 440;
+2: It is Triangle; Its color is CYAN; And its dimensions are: X =42,  Y = 43,  Z = 23;
+1: It is Triangle; Its color is ORANGE; And its dimensions are: X =23,  Y = 12,  Z = 42;
 Empty container. 
 List contents 0 elements.
