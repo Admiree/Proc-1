@@ -2,23 +2,25 @@
 #include <fstream>
 #include <iostream>
 #include "list.h"
+#include "windows.h"
 
 using namespace std;
 
-namespace shapes 
-{
+namespace shapes {
 	void Init(list &list);
 	void Clear(list &list);
 	void LoadElements(list &list, ifstream &inFileStream);
-	void PrintElements(list &list, ofstream &outFileStream);
-	void PrintElementsByMask(list &list, ofstream &outFileStream, mask mask);
+	void PrintElements(list &list, ostream &outFileStream);
+	void PrintElementsByMask(list &list, ostream &outFileStream, mask mask);
 	void SortByPerimeter(list &list);
 }
 
 using namespace shapes;
 
-int main(int argc, char* argv[]) 
-{
+int main(int argc, char* argv[]) {
+
+	SetConsoleCP(1251);
+	SetConsoleOutputCP(1251);
 
 	ifstream in;
 	in.open("in.txt");
@@ -26,15 +28,15 @@ int main(int argc, char* argv[])
 	ofstream out;
 	out.open("out.txt");
 
-	cout << "Start" << endl;
+	cout << "Старт" << endl;
 	list list;
 	Init(list);
 	LoadElements(list, in);
 
-	out << "Filled container. " << endl << endl;
+	out << "Полный контейнер. " << endl << endl;
 	PrintElements(list, out);
 
-	out << "Sorted container. " << endl << endl;
+	out << "Сортированный контейнер. " << endl << endl;
 	SortByPerimeter(list);
 
 	PrintElements(list, out);
@@ -43,19 +45,18 @@ int main(int argc, char* argv[])
 
 	int enter = 0;
 	do {
-		cout << "What mask for output do you want to use?" << endl;
-		cout << "Please, enter (1 - circle; 2 - rectangle; 0 - all of them):" << endl;
+		cout << "Что бы вы хотели вывести?" << endl;
+		cout << "Пожалуйста, введите (1 - круг; 2 - прямоугольник; 0 - все):" << endl;
 		cin >> enter;
 		if (enter != 1 && enter != 2 && enter != 0) {
-			cout << "Error! Only 1, 2 or 0!" << endl;
+			cout << "Ошибка! Только 1, 2 или 0!" << endl;
 		}
 
 	} while (enter != 1 && enter != 2 && enter != 0);
 
-	out << "By your mask. " << endl << endl;
+	out << "Ваши данные. " << endl << endl;
 
-	switch (enter) 
-	{
+	switch (enter) {
 	case 1:
 		PrintElementsByMask(list, out, CIRCLE);
 		break;
@@ -69,12 +70,12 @@ int main(int argc, char* argv[])
 
 	out << endl << endl;
 
-	out << "Empty container. " << endl << endl;
+	out << "Контейнер пуст. " << endl << endl;
 	Clear(list);
 	PrintElements(list, out);
 
-	cout << "Done!" << endl;
-	cout << "Stop" << endl;
+	cout << "Выполнено!" << endl;
+	cout << "Стоп" << endl;
 
 	in.close();
 	out.close();

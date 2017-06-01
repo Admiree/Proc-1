@@ -4,10 +4,8 @@
 
 using namespace std;
 
-namespace shapes 
-{
-	void ReadDimensionsOfShapeFromFileStream(triangle &triangle, ifstream &inFileStream)
-	{
+namespace shapes {
+	void ReadDimensionsOfShapeFromFileStream(triangle &triangle, ifstream &inFileStream) {
 		inFileStream >> triangle.triangleX >> triangle.triangleY >> triangle.triangleZ;
 	}
 }

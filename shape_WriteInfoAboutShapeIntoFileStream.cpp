@@ -4,43 +4,39 @@
 
 using namespace std;
 
-namespace shapes 
-{
+namespace shapes {
 	float CalculateShapePerimeter(shape &shape);
-	void WriteDimensionsOfShapeIntoFileStream(rectangle &rectangle, ofstream &outFileStream);
-	void WriteDimensionsOfShapeIntoFileStream(circle  &circle, ofstream &outFileStream);
-	void WriteDimensionsOfShapeIntoFileStream(triangle  &triangle, ofstream &outFileStream);
-
-	void WriteInfoAboutShapeIntoFileStream(shape &outShape, ofstream &outFileStream)
-	{
-		void CheckOutputFile(ostream &outFileStream);
-		outFileStream << "It is ";
+	void WriteDimensionsOfShapeIntoFileStream(rectangle &rectangle, ostream &outFileStream);
+	void WriteDimensionsOfShapeIntoFileStream(circle  &circle, ostream &outFileStream);
+	void WriteDimensionsOfShapeIntoFileStream(triangle  &triangle, ostream &outFileStream);
+	
+	
+	void WriteInfoAboutShapeIntoFileStream(shape &outShape, ostream &outFileStream) {
+		outFileStream << "Ýòî ";
 		
-		switch (outShape.key) 
-		{
+		switch (outShape._key) {
 		case shape::key::RECTANGLE:
-			outFileStream << "Rectangle";
+			outFileStream << "Ïðÿìîóãîëüíèê";
 			break;
 		case shape::key::CIRCLE:
-			outFileStream << "Circle";
+			outFileStream << "Êðóã";
 			break; 
 		case shape::key::TRIANGLE:
-			outFileStream << "Triangle";
+			outFileStream << "Òðåóãîëüíèê";
 			break;
 		default:
 			break;
 		}
 
-		outFileStream << "; Its color is ";
-		string m[7] = { "RED", "ORANGE", "YELLOW", "GREEN", "CYAN", "BLUE", "MAGNETA" };
+		outFileStream << "; Öâåò ";
+		string m[7] = { "ÊÐÀÑÍÛÉ", "ÎÐÀÍÆÅÂÛÉ", "ÆÅËÒÛÉ", "ÇÅËÅÍÛÉ", "ÁÈÐÞÇÎÂÛÉ", "ÃÎËÓÁÎÉ", "ÔÈÎËÅÒÎÂÛÉ" };
 
 		int i = outShape._color - 1;
 		outFileStream << m[i].c_str();
 
-		outFileStream << "; And its dimensions are: ";
+		outFileStream << "; Ðàçìåðíîñòè: ";
 
-		switch (outShape.key) 
-		{
+		switch (outShape._key) {
 		case shape::key::RECTANGLE:
 			WriteDimensionsOfShapeIntoFileStream(outShape.rectangle, outFileStream);
 			break;
@@ -54,8 +50,10 @@ namespace shapes
 			break;
 		}
 
-		outFileStream << "; Plotnost: " <<outShape.plotn;
-		outFileStream << "; Its perimeter is " << CalculateShapePerimeter(outShape);
+		outFileStream << "Ïëîòíîñòü ðàâíà: " <<outShape.plotn;
+
+		outFileStream << "; Ïåðèìåòð ðàâåí " << CalculateShapePerimeter(outShape);
+
 		outFileStream << ";" << endl;
 	}
 }

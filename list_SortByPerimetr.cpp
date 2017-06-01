@@ -9,21 +9,16 @@ namespace shapes {
 
 	float CalculateShapePerimeter(shape &shape);
 
-	void SortByPerimeter(list &list)
-	{
+	void SortByPerimeter(list &list) {
 		listElement *current = list.listHead, *temp = NULL, *previous = NULL;
 		bool flag = false;
 
-		do
-		{
+		do {
 			flag = false;
 			current = list.listHead;
-			while (current->next) 
-			{
-				if (CalculateShapePerimeter(*(current->shape)) > CalculateShapePerimeter(*(current->next->shape)))
-				{
-					if (current == list.listHead) 
-					{
+			while (current->next) {
+				if (CalculateShapePerimeter(*(current->shape)) > CalculateShapePerimeter(*(current->next->shape))) {
+					if (current == list.listHead) {
 						temp = current;
 						current = temp->next;
 						temp->next = current->next;

@@ -4,10 +4,8 @@
 
 using namespace std;
 
-namespace shapes 
-{	
-	void WriteDimensionsOfShapeIntoFileStream(rectangle &rectangle, ofstream &outFileStream)
-	{
-		outFileStream << "It's rectangle: " << "start X = " << rectangle.startX << ", start Y = " << rectangle.startY << ", end X = " << rectangle.endX << ", end Y = " << rectangle.endY;
+namespace shapes {	
+	void WriteDimensionsOfShapeIntoFileStream(rectangle &rectangle, ostream &outFileStream) {
+		outFileStream << "старт X = " << rectangle.startX << ", старт Y = " << rectangle.startY << ", конец X = " << rectangle.endX << ", конец Y = " << rectangle.endY << ";" << endl;
 	}
 }

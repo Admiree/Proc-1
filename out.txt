@@ -1,27 +1,40 @@
-Filled container. 
+Полный контейнер. 
 
-List contents 5 elements.
-5: It is Circle; Its color is ORANGE; And its dimensions are: It's circle: radius = 50, center X = 13, center Y = 17; Plotnost: 2.2; Its perimeter is 314.159;
-4: It is Circle; Its color is ORANGE; And its dimensions are: It's circle: radius = 2, center X = 15, center Y = 20; Plotnost: 1.2; Its perimeter is 12.5664;
-3: It is Rectangle; Its color is CYAN; And its dimensions are: It's rectangle: start X = 10, start Y = 20, end X = 30, end Y = 440; Plotnost: 2.2; Its perimeter is 880;
-2: It is Triangle; Its color is GREEN; And its dimensions are: It's triangle: X = 42, Y = 43, Z = 23; Plotnost: 3.2; Its perimeter is 108;
-1: It is Triangle; Its color is RED; And its dimensions are: It's triangle: X = 23, Y = 12, Z = 42; Plotnost: 2.3; Its perimeter is 77;
-Sorted container. 
+В контейнере 5 элементов.
+5: Это Круг; Цвет ОРАНЖЕВЫЙ; Размерности: радиус = 50, центр X = 13, центр Y = 17;
+Плотность равна: 2.2; Периметр равен 314.159;
+4: Это Круг; Цвет ОРАНЖЕВЫЙ; Размерности: радиус = 10, центр X = 15, центр Y = 20;
+Плотность равна: 1.2; Периметр равен 62.8319;
+3: Это Прямоугольник; Цвет БИРЮЗОВЫЙ; Размерности: старт X = 10, старт Y = 20, конец X = 30, конец Y = 440;
+Плотность равна: 2.2; Периметр равен 880;
+2: Это Треугольник; Цвет ЗЕЛЕНЫЙ; Размерности: X =42,  Y = 43,  Z = 23;
+Плотность равна: 3.2; Периметр равен 0;
+1: Это Треугольник; Цвет КРАСНЫЙ; Размерности: X =23,  Y = 12,  Z = 42;
+Плотность равна: 2.3; Периметр равен 0;
+Сортированный контейнер. 
 
-List contents 5 elements.
-5: It is Circle; Its color is ORANGE; And its dimensions are: It's circle: radius = 2, center X = 15, center Y = 20; Plotnost: 1.2; Its perimeter is 12.5664;
-4: It is Triangle; Its color is RED; And its dimensions are: It's triangle: X = 23, Y = 12, Z = 42; Plotnost: 2.3; Its perimeter is 77;
-3: It is Triangle; Its color is GREEN; And its dimensions are: It's triangle: X = 42, Y = 43, Z = 23; Plotnost: 3.2; Its perimeter is 108;
-2: It is Circle; Its color is ORANGE; And its dimensions are: It's circle: radius = 50, center X = 13, center Y = 17; Plotnost: 2.2; Its perimeter is 314.159;
-1: It is Rectangle; Its color is CYAN; And its dimensions are: It's rectangle: start X = 10, start Y = 20, end X = 30, end Y = 440; Plotnost: 2.2; Its perimeter is 880;
+В контейнере 5 элементов.
+5: Это Треугольник; Цвет ЗЕЛЕНЫЙ; Размерности: X =42,  Y = 43,  Z = 23;
+Плотность равна: 3.2; Периметр равен 0;
+4: Это Треугольник; Цвет КРАСНЫЙ; Размерности: X =23,  Y = 12,  Z = 42;
+Плотность равна: 2.3; Периметр равен 0;
+3: Это Круг; Цвет ОРАНЖЕВЫЙ; Размерности: радиус = 10, центр X = 15, центр Y = 20;
+Плотность равна: 1.2; Периметр равен 62.8319;
+2: Это Круг; Цвет ОРАНЖЕВЫЙ; Размерности: радиус = 50, центр X = 13, центр Y = 17;
+Плотность равна: 2.2; Периметр равен 314.159;
+1: Это Прямоугольник; Цвет БИРЮЗОВЫЙ; Размерности: старт X = 10, старт Y = 20, конец X = 30, конец Y = 440;
+Плотность равна: 2.2; Периметр равен 880;
 
 
-By your mask. 
+Ваши данные. 
 
-Here they are.
-It is Rectangle; Its color is CYAN; And its dimensions are: It's rectangle: start X = 10, start Y = 20, end X = 30, end Y = 440; Plotnost: 2.2; Its perimeter is 880;
+Итого.
+Это Круг; Цвет ОРАНЖЕВЫЙ; Размерности: радиус = 10, центр X = 15, центр Y = 20;
+Плотность равна: 1.2; Периметр равен 62.8319;
+Это Круг; Цвет ОРАНЖЕВЫЙ; Размерности: радиус = 50, центр X = 13, центр Y = 17;
+Плотность равна: 2.2; Периметр равен 314.159;
 
 
-Empty container. 
+Контейнер пуст. 
 
-List contents 0 elements.
+В контейнере 0 элементов.
